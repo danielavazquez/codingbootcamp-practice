@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('/img/got-bg.jpg');
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    // RGB-aplha and determines the opacity of the image that is the aplha channel
+    background-color: rgba(0,0,0,0.5);
+}
+
+.top {
+    text-align: right;
+    font-size: 2em;
+}

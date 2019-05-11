@@ -1,0 +1,90 @@
+* {box-sizing: border-box;
+    margin: 0%;
+}
+
+
+
+body {
+    margin: 0%;
+    font-family: 'Montserrat', sans-serif;
+    color: #000000; 
+    }
+
+
+
+/* add black and white banner */
+header{
+    background-image: url() 
+}
+
+
+
+/* this updates the width and height of sections remember to add a % and vh */
+section {
+    height: 100vh;
+    width: 100%; 
+}
+
+
+
+
+h1 {
+    color: #1a1b1f;
+    font-size: 20px;
+    display: inline;
+    
+    
+}
+
+
+
+
+#about {
+    background-color: #FFE964;
+    text-align: center;
+    color: #000000;   
+}
+#skills {
+    background-color:#ffffff;
+    color: #000000;
+}
+#portfolio {
+    background-color: #FF523D;
+    color: #000000;
+}
+#contact_me {
+    background-color: #223C88;
+    color: #000000; 
+}
+footer {
+    background-color: #ffffff; 
+}
+
+
+
+nav{
+    display:flex;
+    flex-wrap: wrap;
+    padding: 20px 50px 20px 50px;
+    background-color: lightgrey;
+    height: 100px;
+    width: 100%;
+    div{
+        width: 30%;
+    }
+}
+
+/* to change navigation links use li */
+nav .nav ul{
+    width: 70%;
+    margin: 0;
+    padding-right: 15px;
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+}
+/* specify a since you are changing the text */
+nav .nav ul a {
+    text-decoration: none;
+    padding: 15px;
+}

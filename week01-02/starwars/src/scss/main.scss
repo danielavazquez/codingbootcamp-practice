@@ -1,0 +1,44 @@
+* {box-sizing: border-box;
+    margin: 0px;
+}
+// 1
+body {
+    background-color:#ffffff;
+}
+// 2 the whole website 
+.content { 
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+}
+// 3
+#plot {
+    .content {
+        // moves picture wrap when space is not enough
+        flex-wrap: wrap;
+        h2 {
+            // 100% when not enough small page it wraps plot
+            width: 100%;
+            text-align: center;
+        }
+            .banner {
+                width: 200px;
+                img {
+                    // img receives 100% of the 200px
+                    width: 100%;
+                }
+                }
+                div {
+                // this div is outside banner and inside content make sure brackets line up hover over banner to line up
+                width: 600px;
+                // p inside div because it is inside the element
+                    p{
+                        padding: 20px;
+                    }
+            }
+        }
+    }
+
+
+@import 'header.scss';
+@import 'navigation.scss';

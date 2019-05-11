@@ -1,0 +1,12 @@
+.banner__bg{
+  background-image: url('/img/banner.jpg');
+  background-size: cover;
+  // specify height always when you add an image background
+  height: 100vh;
+}
+
+h1 {
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 70px;
+}

@@ -1,0 +1,22 @@
+ // 2A
+ header {
+    background-image: url("/img/welcome.jpg");
+    // below gives the image the same size as the container
+    background-size: cover;  
+        .content{
+            height: 450px;
+            // below is to center the text
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            // add a bracket at end of h1 so it knows it ends and is not nested in
+            h1{
+                color: #ffffff;
+            }
+            h2{
+                 color: grey;
+            }
+            }
+            
+        }
+    
