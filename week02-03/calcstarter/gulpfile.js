@@ -43,7 +43,7 @@ function createStructure(done) {
 // delete all assets in dist
 function cleanAssets(done) {
     return del(
-        ['dist/**/*.html', 'dist/fonts/**/*', 'dist/img/**/*'], 
+        ['dist/**/*.html', 'dist/fonts/**/*', 'dist/img/**/*', 'dist/js/**/*'], 
         { force: true }
     );
 }
@@ -63,8 +63,14 @@ function publishFonts(done) {
  
 // Copy all images from src/img into dist
 function publishImages(done) {
-  return gulp.src('src/img/**/*')
-    .pipe(gulp.dest('dist/img'));
+    return gulp.src('src/img/**/*')
+      .pipe(gulp.dest('dist/img'));
+}
+
+// Copy all JavaScript files from src/js into dist
+function publishJavaScript(done) {
+    return gulp.src('src/js/**/*')
+      .pipe(gulp.dest('dist/js'));
 }
  
 // compile SCSS files
@@ -86,6 +92,7 @@ function watchFiles(done) {
     gulp.watch("src/**/*.html", gulp.series(publishHtml, reload));
     gulp.watch("src/fonts/**/*", gulp.series(publishFonts, reload));
     gulp.watch("src/img/**/*", gulp.series(publishImages, reload));
+    gulp.watch("src/js/**/*", gulp.series(publishJavaScript, reload));
     gulp.watch("src/scss/**/*.scss", gulp.series(compileScss, reload));
 }
  
@@ -107,5 +114,5 @@ function reload(done) {
  
 // export tasks
 exports.structure = createStructure;
-exports.dev = gulp.series(cleanAssets, publishHtml, publishFonts, publishImages, compileScss);
-exports.watch = gulp.series(cleanAssets, publishHtml, publishFonts, publishImages, compileScss, serve, watchFiles);
+exports.dev = gulp.series(cleanAssets, publishHtml, publishFonts, publishImages, publishJavaScript, compileScss);
+exports.watch = gulp.series(cleanAssets, publishHtml, publishFonts, publishImages, publishJavaScript, compileScss, serve, watchFiles);
